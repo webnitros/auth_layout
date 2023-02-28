@@ -1,0 +1,185 @@
+.auth_modal {
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+
+.fade.show {
+    opacity: 1;
+}
+
+.auth_modal.fade .modal-dialog {
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    -o-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+.auth_modal.in .auth_modal, .auth_modal.show .auth_modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.auth_modal-open .auth_modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    padding-left: 15px;
+}
+
+.auth_modal-dialog {
+    position: relative;
+    width: 360px;
+    margin: 30px auto;
+}
+
+.auth_modal-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    outline: 0;
+    padding: 20px 20px;
+}
+
+.auth_modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000000;
+}
+
+.auth_modal-backdrop.fade {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.auth_modal-backdrop.in, .auth_modal-backdrop.show {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.auth_modal-header {
+    padding: 0;
+}
+
+.auth_modal-close {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    z-index: 1050;
+    -webkit-appearance: none;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-align: center;
+    margin: 0;
+    font-family: inherit;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    cursor: pointer;
+
+}
+
+.auth_modal-close span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.auth_modal-close span:hover {
+    opacity: .8;
+}
+
+.in.auth_modal-header .close {
+    margin-top: -2px;
+}
+
+.auth_modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+}
+
+.auth_modal-body {
+    position: relative;
+}
+
+
+@media (min-width: 768px) {
+    .auth_modal-content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+.auth_modal-header:before,
+.auth_modal-header:after,
+.auth_modal-footer:before,
+.auth_modal-footer:after {
+    content: " ";
+    display: table;
+}
+
+.auth_modal-header:after,
+.auth_modal-footer:after {
+    clear: both;
+}
+
+
+.auth_modal-backdrop {
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000;
+}
+
+@media (max-width: 400px) {
+    .auth_modal-dialog {
+        width: 320px !important;
+    }
+
+    .auth_block_first {
+        width: 280px !important;
+    }
+    .auth_modal-open .auth_modal {
+        padding-left: 0 !important;
+    }
+}
